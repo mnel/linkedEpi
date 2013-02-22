@@ -1,7 +1,0 @@
-Package: linkedEpi
-Title: Tools for linked data analysis
-Description: This is a package to implement linked data analysis in R. It stems in part from the 
-Introductory Analysis of Linked Data course run by the School of Public Health at the University of Sydney
-Version: 0.1
-Maintainer: Michael Nelson <mnels@doh.health.nsw.gov.au>
-Author: Michael Nelson, Mark Greenaway, Danushka Fox, 
