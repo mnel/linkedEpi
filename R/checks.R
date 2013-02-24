@@ -31,12 +31,16 @@ check.unique <- function(data, id = 'ppn'){
 #' df.unique <- data.frame(ppn = seq_len(3), var2 = seq_len(3))
 #' merge.unique(df.unique, df.non, by = 'ppn')
 #' # Error: check.unique(y, id = by) is not TRUE
-merge.unique <- function(..., check.unique=TRUE)
+merge.unique <- function(x, y, by , ...,  check.unique=TRUE)
 {
-  args = list(...)
-  x = args[[1]]
-  y = args[[2]]
-  by = args[["by"]]
-  stopifnot(check.unique(x, id=by), check.unique(y, id=by))
-  return(do.call(merge, args))
+  # process checks if required 
+  if(check.unique){
+  stopifnot(check.unique(x, id = by), check.unique(y, id = by))} else {
+    # warning of no checks 
+    message('Not checking for uniqueness.')
+  }
+  # proceeed with the merge
+  merge(x = x,y = y, by = by, ...)
 }
+
+
