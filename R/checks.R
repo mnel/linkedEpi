@@ -22,6 +22,7 @@ check.unique <- function(data, id = 'ppn'){
 #' key
 #'
 #' @param x, y data frames, or objects to be coerced to one
+#' @param by  character indicating which column to merge by (and check uniqueness)
 #' @param check.unique logical; if TRUE, x and y are checked to see that
 #' the column used for merging is unique
 #' @return Merged data set
@@ -42,5 +43,3 @@ merge.unique <- function(x, y, by , ...,  check.unique=TRUE)
   # proceeed with the merge
   merge(x = x,y = y, by = by, ...)
 }
-
-

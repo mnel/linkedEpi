@@ -1,1 +1,2 @@
 export(check.unique)
+export(merge.unique)
