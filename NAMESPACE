@@ -1,2 +1,7 @@
+S3method(fileseq,data.frame)
+S3method(fileseq,data.table)
 export(check.unique)
+export(fileseq)
 export(merge.unique)
+export(morbseq)
+import(data.table)
