@@ -1,0 +1,7 @@
+NEWS for version 0.0.2
+
+- added basic morbseq and fileseq functions
+
+NEWS for version 0.0.1
+
+- basic functions for checking unique ids and merging appropriately
