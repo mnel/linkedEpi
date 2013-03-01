@@ -14,3 +14,13 @@ test_that('merge.unique does not merge data sets with non-unique keys for easy t
   df.unique <- data.frame(ppn = seq_len(3), var2 = seq_len(3))
   expect_error(merge.unique(df.non, df.unique, by="ppn"))
 })
+
+context('File sequence generation')
+test_that('fileseq correctly adds a file seq column to a data frame', {
+  df = data.frame(name=c("Bob the Builder", "Spongebob Squarepants"))
+  expect_equal(fileseq(df),
+               data.frame(name=c("Bob the Builder", "Spongebob Squarepants"),
+                          fileseq=1:2))
+})
+
+# TODO: Create test for morbseq
