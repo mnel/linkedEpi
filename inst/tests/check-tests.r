@@ -23,4 +23,9 @@ test_that('fileseq correctly adds a file seq column to a data frame', {
                           fileseq=1:2))
 })
 
-# TODO: Create test for morbseq
+test_that('morbseq correctly adds a morb seq column to a data frame', {
+  df <- data.frame(ppn = c(1L,1L,2L), var1 = seq_len(3))
+  expect_equal(morbseq(df, id="ppn"),
+               data.frame(ppn = c(1L,1L,2L), var1 = seq_len(3),
+                          morbseq=c(1,2,1)))
+})
