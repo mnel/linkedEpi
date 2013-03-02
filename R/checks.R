@@ -32,7 +32,7 @@ check.unique <- function(data, id = 'ppn'){
 #' df.unique <- data.frame(ppn = seq_len(3), var2 = seq_len(3))
 #' merge.unique(df.unique, df.non, by = 'ppn')
 #' # Error: check.unique(y, id = by) is not TRUE
-merge.unique <- function(x, y, by , ...,  check.unique=TRUE)
+merge.unique <- function(x, y, by="ppn" , ...,  check.unique=TRUE)
 {
   # process checks if required 
   if(check.unique){
